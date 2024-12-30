@@ -31,19 +31,19 @@ public class StringUtilsTest {
 
     static Stream<Arguments> provideReplaceTestCases() {
         return Stream.of(
+                // T6 - Caso in cui original è vuoto
+                Arguments.of("", "mondo", "universo", ""),
+                // T7 - Caso con il replacement vuoto
+                Arguments.of("Integrazione e test di sistemi software", "test", "", "Integrazione e  di sistemi software"),
                 // T8 - Caso con valori corretti e sostituzioni effettuate
                 Arguments.of("Ciao mondo, mondo bello!", "mondo", "universo", "Ciao universo, universo bello!"),
                 // T9 - Caso in cui il target non è presente nella stringa originale
                 Arguments.of("Ciao mondo!", "galassia", "universo", "Ciao mondo!"),
-                // T6 - Caso in cui original è vuoto
-                Arguments.of("", "mondo", "universo", ""),
                 // T10 - Caso con target case sensitive
                 Arguments.of("Ciao mondo, Mondo bello!", "mondo", "universo", "Ciao universo, Mondo bello!"),
                 // T11 - Caso con original con caratteri speciali
                 Arguments.of("Ciao@mondo#mondo", "mondo", "$", "Ciao@$#$"),
-                // T7 - Caso con il replacement vuoto
-                Arguments.of("Integrazione e test di sistemi software", "test", "", "Integrazione e  di sistemi software"),
-                // T12 -Caso in cui replacement e target sono uguali
+                // T12 - Caso in cui replacement e target sono uguali
                 Arguments.of("Integrazione e test di sistemi software", "software", "software", "Integrazione e test di sistemi software"),
                 // T13 - Caso con stringa di lunghezza 1
                 Arguments.of("m", "m", "M", "M"),
@@ -67,10 +67,10 @@ public class StringUtilsTest {
 
     static Stream<Arguments> provideNullValuesTestCases() {
         return Stream.of(
-                // T2 - Caso con target nullo
-                Arguments.of("Ciao mondo, mondo bello!", null, "universo"),
                 // T1 - Caso con original nullo
                 Arguments.of(null, "mondo", "universo"),
+                // T2 - Caso con target nullo
+                Arguments.of("Ciao mondo, mondo bello!", null, "universo"),
                 // T4 - Caso con replacement nullo
                 Arguments.of("Ciao mondo, mondo bello!", "mondo", null),
                 // T5 - Caso in cui original, target e replacement sono nulli
