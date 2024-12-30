@@ -2,13 +2,25 @@ package org.task1;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
+import java.lang.reflect.Modifier;
+import java.lang.reflect.Constructor;
 import java.util.stream.Stream;
 
 public class StringUtilsTest {
+
+    @DisplayName("Test per il costruttore")
+    @Test
+    void testPrivateConstructor() throws Exception {
+        Constructor<StringUtils> constructor = StringUtils.class.getDeclaredConstructor();
+        Assertions.assertTrue(Modifier.isPrivate(constructor.getModifiers()));
+        constructor.setAccessible(true);
+        Assertions.assertDoesNotThrow(() -> constructor.newInstance());
+    }
 
     @DisplayName("Combinazione di possibili valori.")
     @ParameterizedTest
@@ -36,7 +48,13 @@ public class StringUtilsTest {
                 // T13 - Caso con stringa di lunghezza 1
                 Arguments.of("m", "m", "M", "M"),
                 // T14 - Caso con stringhe molto lunghe
-                Arguments.of("a".repeat(1_000_000), "a", "b", "b".repeat(1_000_000))
+                Arguments.of("a".repeat(1_000_000), "a", "b", "b".repeat(1_000_000)),
+                // Original senza spazi
+                Arguments.of("helloworld", "world", "everyone", "helloeveryone"),
+                // Original e target contenente numeri
+                Arguments.of("JUnit5 Java Framework", "5", "Testing", "JUnitTesting Java Framework"),
+                // target contenente spazi
+                Arguments.of("JUnit5 Java Framework", " Java ", "Testing", "JUnit5TestingFramework")
         );
     }
 

@@ -1,6 +1,9 @@
 package org.task1;
 
 public class StringUtils {
+
+    private StringUtils() { }
+
     /**
      * Sostituisce tutte le occorrenze di una sottostringa (`target`) con un'altra sottostringa (`replacement`)
      * all'interno di una stringa originale (`original`).
