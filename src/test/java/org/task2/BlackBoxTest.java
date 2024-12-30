@@ -42,3 +42,7 @@ public class BlackBoxTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> BMIUtils.calcolaBMI(peso,altezza));
     }
 }
+
+
+
+

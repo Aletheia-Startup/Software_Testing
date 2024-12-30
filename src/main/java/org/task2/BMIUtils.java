@@ -15,20 +15,24 @@ public class BMIUtils {
     public static double calcolaBMI(double peso, double altezza) {
         // Controllo dei valori non validi per peso e altezza
         if (peso < 1.50 || peso > 500) {
-            throw new IllegalArgumentException("Il peso o l'altezza devono essere valori reali");
+            throw new IllegalArgumentException("Il peso deve avere valori reali");
         }
 
         if (altezza < 0.40 || altezza > 2.70) {
-            throw new IllegalArgumentException("Il peso o l'altezza devono essere valori reali");
+            throw new IllegalArgumentException("L'altezza deve avere valori reali");
         }
 
         // Calcolo del BMI
         double bmi = peso / (altezza * altezza);
+        double ceiledBMI = Math.ceil(bmi * 100.0) / 100.0;
 
         // Limiti per BMI (range ragionevole)
-        if (bmi < 9.2 || bmi > 80) {
+        if (ceiledBMI < 10 || ceiledBMI > 80) {
             throw new IllegalArgumentException("Il BMI calcolato non è realistico.");
         }
-        return Math.ceil(bmi * 100.0) / 100.0;
+        return ceiledBMI;
     }
 }
+
+
+

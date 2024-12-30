@@ -17,7 +17,7 @@ public class BMIUtilsTest {
     @DisplayName("Test per il costruttore")
     @Test
     void testPrivateConstructor() throws Exception {
-        Constructor<StringUtils> constructor = StringUtils.class.getDeclaredConstructor();
+        Constructor<BMIUtils> constructor = BMIUtils.class.getDeclaredConstructor();
         Assertions.assertTrue(Modifier.isPrivate(constructor.getModifiers()));
         constructor.setAccessible(true);
         Assertions.assertDoesNotThrow(() -> constructor.newInstance());
@@ -33,12 +33,16 @@ public class BMIUtilsTest {
 
     static Stream<Arguments> provideCorrectValues() {
         return Stream.of(
-                // T2 - Caso in cui il peso non sia valido
+                // T1 - Valori Validi
                 Arguments.of(80.00, 1.87),
-                // T3 - Limite Altezza
-                Arguments.of(1.50, 0.40),
-                // T3 - Limite Peso
-                Arguments.of(3.00, 0.40)
+                // T13 - Limite Peso
+                Arguments.of(3.00, 0.40),
+                // T14 - Limite Peso Superiore
+                Arguments.of(500, 2.70),
+                // T15 Limite Inferiore BMI
+                Arguments.of( 48.4, 2.20),
+                // T16 Limite Superiore BMI
+                Arguments.of(150.15, 1.37)
         );
     }
 
@@ -51,6 +55,8 @@ public class BMIUtilsTest {
 
     static Stream<Arguments> provideMultipleValues() {
         return Stream.of(
+                // T12 - Limite Altezza e BMI non realistico
+                Arguments.of(1.50, 0.40),
                 // T2 - Caso in cui il peso non sia valido
                 Arguments.of(0.50, 1.87),
                 // T3 - Caso in cui l'altezza non sia valida
@@ -60,14 +66,20 @@ public class BMIUtilsTest {
                 // T5 - Caso in cui il BMI non è valido - Inferiore
                 Arguments.of(30.00, 2.15),
                 // Casi di test rilevati nel PIT
-                // Caso sotto limite altezza
+                // T8 - Caso sotto limite altezza
                 Arguments.of(1.49, 1.87),
-                // Caso sotto limite peso
+                // T9 -  Caso sotto limite peso
                 Arguments.of(80.00, 0.39),
-                // Caso in cui si superi il peso massimo
+                // T6 - Caso in cui si superi il peso massimo
                 Arguments.of(3000.00,1.90),
-                // Caso in cui si superi l'altezza massima
-                Arguments.of(100.00, 5.27)
+                // T7 - Caso in cui si superi l'altezza massima
+                Arguments.of(100.00, 5.27),
+                // T10 - BMI Fuori limite inferiore
+                Arguments.of(75.9, 2.77),
+                // T11 - BMI Fuori limite superiore
+                Arguments.of(150.0, 1.36)
+
         );
     }
 }
+
