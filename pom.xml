@@ -32,18 +32,5 @@
             <version>1.9.2</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>jfree</groupId>
-            <artifactId>jfreechart</artifactId>
-            <version>1.0.1</version>
-        </dependency>
-
-                <dependency>
-            <groupId>com.opencsv</groupId>
-            <artifactId>opencsv</artifactId>
-            <version>5.7.1</version> <!-- Usa la versione più recente -->
-        </dependency>
-
     </dependencies>
-
 </project>
