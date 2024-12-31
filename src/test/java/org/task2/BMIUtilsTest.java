@@ -34,7 +34,7 @@ public class BMIUtilsTest {
                 // T1 - Valori Validi
                 Arguments.of(80.00, 1.87),
                 // T13 - Limite Peso
-                Arguments.of(3.00, 0.40),
+                Arguments.of(2.40, 0.40),
                 // T14 - Limite Peso Superiore
                 Arguments.of(500, 2.50),
                 // T15 Limite Inferiore BMI
