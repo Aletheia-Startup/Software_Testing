@@ -1,6 +1,0 @@
-if (peso > 500.00) { // Controllo realistico per il peso
-            throw new IllegalArgumentException("Il peso fornito non è realistico.");
-        }
-if (altezza > 2.70) { // Controllo realistico per l'altezza
-        throw new IllegalArgumentException("L'altezza fornita non è realistica.");
-      }

@@ -6,8 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
-import org.task1.StringUtils;
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;
 import java.util.stream.Stream;
@@ -38,7 +36,7 @@ public class BMIUtilsTest {
                 // T13 - Limite Peso
                 Arguments.of(3.00, 0.40),
                 // T14 - Limite Peso Superiore
-                Arguments.of(500, 2.70),
+                Arguments.of(500, 2.50),
                 // T15 Limite Inferiore BMI
                 Arguments.of( 48.4, 2.20),
                 // T16 Limite Superiore BMI
@@ -66,9 +64,9 @@ public class BMIUtilsTest {
                 // T5 - Caso in cui il BMI non è valido - Inferiore
                 Arguments.of(30.00, 2.15),
                 // Casi di test rilevati nel PIT
-                // T8 - Caso sotto limite altezza
-                Arguments.of(1.49, 1.87),
-                // T9 -  Caso sotto limite peso
+                // T8 - Caso sotto limite peso
+                Arguments.of(2.39, 1.87),
+                // T9 -  Caso sotto limite altezza
                 Arguments.of(80.00, 0.39),
                 // T6 - Caso in cui si superi il peso massimo
                 Arguments.of(3000.00,1.90),
