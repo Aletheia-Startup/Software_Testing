@@ -1,13 +1,10 @@
 package org.task2;
 
-
 import net.jqwik.api.*;
 import net.jqwik.api.constraints.*;
 import net.jqwik.api.statistics.Histogram;
-import net.jqwik.api.statistics.Statistics;
 import net.jqwik.api.statistics.StatisticsReport;
 import org.junit.jupiter.api.Assertions;
-
 
 class BMIUtilsPBTest {
 

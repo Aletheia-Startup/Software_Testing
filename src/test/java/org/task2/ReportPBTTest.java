@@ -8,16 +8,30 @@ import org.junit.jupiter.api.Assertions;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class ReportPBTTest {
-    // Test per valori validi di peso e altezza
+    // Metodo per ottenere il percorso della directory di report con data e ora
+    private static String getReportDirectory() {
+        String timestamp = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss").format(new Date());
+        String reportDir = "./risultati/PTB_Report/PTB_Report_" + timestamp;
+        File dir = new File(reportDir);
+        if (!dir.exists()) {
+            dir.mkdirs(); // Crea la directory e le eventuali directory padre mancanti
+        }
+        return reportDir;
+    }
+
     @Label("Test per valori validi di peso e altezza; è probabile che il range valido di valori dia un BMI fuori range.")
     @Property
     void calcolaBMI_valoriValidi(@ForAll @DoubleRange(min = 2.40, max = 500.0) double peso,
                                  @ForAll @DoubleRange(min = 0.40, max = 2.50) double altezza) {
         double bmi = 0.00;
+        String reportDirectory = getReportDirectory(); // Ottieni la directory dinamica
+
         try {
-            File validoFile = new File("./risultati/bmi_valido.csv");
+            File validoFile = new File(reportDirectory + "/bmi_valido.csv");
             if (!validoFile.exists() || validoFile.length() == 0) {
                 try (FileWriter writer = new FileWriter(validoFile, true)) {
                     // Scrivi l'intestazione se il file è vuoto o non esiste
@@ -40,9 +54,9 @@ public class ReportPBTTest {
             Assertions.assertTrue(true, "Eccezione prevista per valori non validi");
 
             double bmiErrato = peso / (altezza * altezza);
-            double ceiledBMI =  Math.ceil(bmiErrato * 100.0) / 100.0;
+            double ceiledBMI = Math.ceil(bmiErrato * 100.0) / 100.0;
 
-            File invalidoFile = new File("./risultati/bmi_invalido.csv");
+            File invalidoFile = new File(reportDirectory + "/bmi_invalido.csv");
             if (!invalidoFile.exists() || invalidoFile.length() == 0) {
                 try (FileWriter errorWriter = new FileWriter(invalidoFile, true)) {
                     // Scrivi l'intestazione se il file è vuoto o non esiste

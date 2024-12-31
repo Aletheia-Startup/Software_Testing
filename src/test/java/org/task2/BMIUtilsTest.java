@@ -66,7 +66,7 @@ public class BMIUtilsTest {
                 // Casi di test rilevati nel PIT
                 // T8 - Caso sotto limite peso
                 Arguments.of(2.39, 1.87),
-                // T9 -  Caso sotto limite altezza
+                // T9 - Caso sotto limite altezza
                 Arguments.of(80.00, 0.39),
                 // T6 - Caso in cui si superi il peso massimo
                 Arguments.of(3000.00,1.90),
