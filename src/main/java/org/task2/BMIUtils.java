@@ -27,7 +27,7 @@ public class BMIUtils {
         double ceiledBMI = Math.ceil(bmi * 100.0) / 100.0;
 
         // Limiti per BMI (range ragionevole)
-        if (ceiledBMI <= 0 || ceiledBMI > 80) {
+        if (ceiledBMI < 10 || ceiledBMI > 80) {
             throw new IllegalArgumentException("Il BMI calcolato non è realistico.");
         }
         return ceiledBMI;
