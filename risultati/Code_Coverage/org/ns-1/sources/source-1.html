@@ -1,0 +1,159 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > StringUtils</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">org.task1</a>
+</div>
+
+<h1>Coverage Summary for Class: StringUtils (org.task1)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">StringUtils</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (10/10)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (12/12)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package org.task1;
+&nbsp;
+&nbsp;public class StringUtils {
+&nbsp;
+&nbsp;    private StringUtils() { }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Sostituisce tutte le occorrenze di una sottostringa (`target`) con un&#39;altra sottostringa (`replacement`)
+&nbsp;     * all&#39;interno di una stringa originale (`original`).
+&nbsp;     *
+&nbsp;     * @param original    La stringa originale in cui effettuare la sostituzione.
+&nbsp;     * @param target      La sottostringa da sostituire.
+&nbsp;     * @param replacement La nuova sottostringa con cui sostituire.
+&nbsp;     * @return Una nuova stringa con tutte le sostituzioni effettuate.
+&nbsp;     * @throws NullPointerException     Se `original`, `target` o `replacement` sono null.
+&nbsp;     * @throws IllegalArgumentException Se `target` è vuoto.
+&nbsp;     */
+&nbsp;
+&nbsp;    public static String replace(String original, String target, String replacement) {
+<b class="fc">&nbsp;        if (original == null || target == null || replacement == null) {</b>
+<b class="fc">&nbsp;            throw new NullPointerException(&quot;original, target e replacement non devono essere null&quot;);</b>
+&nbsp;        }
+<b class="fc">&nbsp;        if (target.isEmpty()) {</b>
+<b class="fc">&nbsp;            throw new IllegalArgumentException(&quot;target non deve essere vuoto&quot;);</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        // Usa un StringBuilder per costruire il risultato
+<b class="fc">&nbsp;        StringBuilder result = new StringBuilder();</b>
+<b class="fc">&nbsp;        int start = 0;</b>
+&nbsp;        int index;
+&nbsp;
+&nbsp;        // Cerca tutte le occorrenze di target e le sostituisce con replacement
+<b class="fc">&nbsp;        while ((index = original.indexOf(target, start)) != -1) {</b>
+<b class="fc">&nbsp;            result.append(original, start, index); // Aggiunge la parte prima di target</b>
+<b class="fc">&nbsp;            result.append(replacement);           // Aggiunge replacement</b>
+<b class="fc">&nbsp;            start = index + target.length();      // Aggiorna il punto di partenza</b>
+&nbsp;        }
+&nbsp;
+&nbsp;        // Aggiunge la parte rimanente della stringa originale
+<b class="fc">&nbsp;        result.append(original.substring(start));</b>
+<b class="fc">&nbsp;        return result.toString();</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-01-01 17:58</div>
+</div>
+</body>
+</html>
