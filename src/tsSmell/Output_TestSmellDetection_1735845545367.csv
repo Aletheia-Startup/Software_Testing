@@ -1,0 +1,6 @@
+App,TestClass,TestFilePath,ProductionFilePath,RelativeTestFilePath,RelativeProductionFilePath,NumberOfMethods,Assertion Roulette,Conditional Test Logic,Constructor Initialization,Default Test,EmptyTest,Exception Catching Throwing,General Fixture,Mystery Guest,Print Statement,Redundant Assertion,Sensitive Equality,Verbose Test,Sleepy Test,Eager Test,Lazy Test,Duplicate Assert,Unknown Test,IgnoredTest,Resource Optimism,Magic Number Test,Dependent Test
+ProgettoTest,BMIUtilsPBTest.java,..\test\java\org\task2\BMIUtilsPBTest.java,..\main\java\org\task2\BMIUtils.java,,,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ProgettoTest,BlackBoxTest.java,..\test\java\org\task2\BlackBoxTest.java,..\main\java\org\task2\BMIUtils.java,,,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,5,0
+ProgettoTest,BMIUtilsTest.java,..\test\java\org\task2\BMIUtilsTest.java,..\main\java\org\task2\BMIUtils.java,,,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0
+ProgettoTest,StringUtilsTest.java,..\test\java\org\task1\StringUtilsTest.java,..\main\java\org\task1\StringUtils.java,,,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0
+ProgettoTest,BlackBoxTest.java,..\test\java\org\task1\BlackBoxTest.java,..\main\java\org\task1\StringUtils.java,,,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,4,0

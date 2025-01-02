@@ -17,6 +17,15 @@
 
 ---
 
+### Commands
+
+- Test Smell - Aprire il terminale nella cartella `tsSmell`
+  ```
+  java -jar .\TestSmellDetector.jar "input.csv"
+  ```
+
+---
+
 ### Documentation
 - [Aletheia - Documentazione](Documentazione.pdf)
 - [Aletheia - Statistiche](https://docs.google.com/spreadsheets/d/1RRu-VnftM7sfuSBF1Zx3lmCurp54a6ziRVPbiDWlw8U/edit?usp=sharing)
