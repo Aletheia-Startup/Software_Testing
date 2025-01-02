@@ -17,13 +17,10 @@
 
 ---
 
-### Commands
-
-- Test Smell - Aprire il terminale nella cartella `tsSmell`
-  ```
-  java -jar .\TestSmellDetector.jar "input.csv"
-  ```
-
+### Test Smell
+Per eseguire il rilevamento dei test smell, sono disponibili due script:
+- **Per Windows:** [runTestSmellDetector.bat](risultati/TestSmellDetector/runTestSmellDetector.bat)
+- **Per Unix:** [runTestSmellDetector.bat](risultati/TestSmellDetector/runTestSmellDetector.sh)
 ---
 
 ### Documentation

@@ -1,0 +1,5 @@
+SoftwareTesting,..\..\src\test\java\org\task2\BMIUtilsPBTest.java,..\..\src\main\java\org\task2\BMIUtils.java
+SoftwareTesting,..\..\src\test\java\org\task2\BlackBoxTest.java,..\..\src\main\java\org\task2\BMIUtils.java
+SoftwareTesting,..\..\src\test\java\org\task2\BMIUtilsTest.java,..\..\src\main\java\org\task2\BMIUtils.java
+SoftwareTesting,..\..\src\test\java\org\task1\StringUtilsTest.java,..\..\src\main\java\org\task1\StringUtils.java
+SoftwareTesting,..\..\src\test\java\org\task1\BlackBoxTest.java,..\..\src\main\java\org\task1\StringUtils.java
