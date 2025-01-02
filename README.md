@@ -18,7 +18,7 @@
 ---
 
 ### Documentation
-- [Aletheia - Documentazione](https://docs.google.com/document/d/17ztqil0HJZzAE57050QArsN4N7Vf1q2I3SNaYR2Bcy0/edit?usp=sharing)
+- [Aletheia - Documentazione](Documentazione.pdf)
 - [Aletheia - Statistiche](https://docs.google.com/spreadsheets/d/1RRu-VnftM7sfuSBF1Zx3lmCurp54a6ziRVPbiDWlw8U/edit?usp=sharing)
 
 ### Tools & Languages
