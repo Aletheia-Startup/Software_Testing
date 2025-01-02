@@ -1,10 +1,10 @@
 
 ## Team Information
 ### Aletheia - [@Aletheia](https://github.com/Aletheia-Startup)
-- Alexandru G. Zaharia - [@darkmodeftw](https://www.github.com/darkmodeftw)
-- Francesco Conforti - [@checcoconf](https://github.com/checcoconf)
-- Giuseppe Pio De Biase - [@GiuseppePioDeBiase](https://github.com/GiuseppePioDeBiase)
-- Lorenzo Calabrese - [@LorenzoCalabrese03](https://github.com/LorenzoCalabrese03)
+- Alexandru G. Zaharia - 774747 - a.zaharia@studenti.uniba.it - [@darkmodeftw](https://www.github.com/darkmodeftw)
+- Francesco Conforti - 776628 - f.conforti9@studenti.uniba.it - [@checcoconf](https://github.com/checcoconf)
+- Giuseppe Pio De Biase - 774957 - g.debiase5@studenti.uniba.it - [@GiuseppePioDeBiase](https://github.com/GiuseppePioDeBiase)
+- Lorenzo Calabrese - 779727 - l.calabrese28@studenti.uniba.it - [@LorenzoCalabrese03](https://github.com/LorenzoCalabrese03)
 
 ---
 
@@ -23,7 +23,7 @@ Per eseguire il rilevamento dei [test smell](https://testsmells.org/index.html),
 ---
 
 ### Documentation
-- [Aletheia - Documentazione](Documentazione.pdf)
+- [Aletheia - Documentazione](Relazione/Documentazione.pdf)
 - [Aletheia - Statistiche](https://docs.google.com/spreadsheets/d/1RRu-VnftM7sfuSBF1Zx3lmCurp54a6ziRVPbiDWlw8U/edit?usp=sharing)
 
 ### Tools & Languages
