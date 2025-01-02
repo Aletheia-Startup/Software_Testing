@@ -13,14 +13,13 @@
   Sostituisce tutte le occorrenze di una sottostringa (`target`) con un'altra sottostringa (`replacement`)
   all'interno di una stringa originale (`original`).
 - **`BMIUtils.calcolaBMI()`**<br>
-   Calcola l'Indice di Massa Corporea (BMI) dato il peso e l'altezza.
-
+   Calcola l'Indice di Massa Corporea (`BMI`) dato il peso e l'altezza.
 ---
 
 ### Test Smell
-Per eseguire il rilevamento dei test smell, sono disponibili due script:
+Per eseguire il rilevamento dei [test smell](https://testsmells.org/index.html), sono disponibili due script:
 - **Per Windows:** [runTestSmellDetector.bat](risultati/TestSmellDetector/runTestSmellDetector.bat)
-- **Per Unix:** [runTestSmellDetector.bat](risultati/TestSmellDetector/runTestSmellDetector.sh)
+- **Per Sistemi Unix:** [runTestSmellDetector.bat](risultati/TestSmellDetector/runTestSmellDetector.sh)
 ---
 
 ### Documentation
