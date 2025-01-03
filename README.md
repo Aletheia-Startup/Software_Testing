@@ -19,7 +19,7 @@
 ### Test Smell
 Per eseguire il rilevamento dei [test smell](https://testsmells.org/index.html), sono disponibili due script:
 - **Per Windows:** [runTestSmellDetector.bat](risultati/TestSmellDetector/runTestSmellDetector.bat)
-- **Per Sistemi Unix:** [runTestSmellDetector.bat](risultati/TestSmellDetector/runTestSmellDetector.sh)
+- **Per Sistemi Unix:** [runTestSmellDetector.sh](risultati/TestSmellDetector/runTestSmellDetector.sh)
 ---
 
 ### Documentation
